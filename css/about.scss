@@ -1,0 +1,357 @@
+@import "variable";
+@import "blocks";
+
+.about-mv {
+    background: linear-gradient(to right,white 0%, white 45.8%, #222222 45.8%, #222222 100%);
+    width: 100%;
+    height: 464px;
+    position: relative;
+}
+
+.about-mv__txt {
+    position: absolute;
+    top: 156px;
+    left: 59.5%;
+
+    &_small_color {
+        color: white;
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: 0.005em;
+    }
+
+    &_big_color_pd {
+        color: white;
+        font-size: 72px;
+        font-weight: 800;
+        line-height: 1.19;
+        padding-top: 10px;
+        letter-spacing: 0.063em;
+    }
+}
+
+.about-mv__img {
+    width: 76.4%;
+    height: 387px;
+    object-fit: cover;
+}
+
+// vision CSS
+
+.vision {
+    width: 100%;
+
+    &-inner {
+        @include inner-width;
+        padding-top: 120px;
+        padding-bottom: 120px;
+        padding-left: 226px;
+    }
+
+    &__sub-ttl_pd {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        font-size: 24px;
+    }
+
+    &__txt {
+        font-size: 16px;
+        font-family: 'Noto Sans JP',sans-serif !important;
+        line-height: 2;
+    }
+}
+
+
+// CEO CSS 
+
+.ceo {
+    width: 100%;
+    position: relative;
+
+    &-inner {
+        @include inner-width;
+        padding-top: 144px;
+    }
+
+    &__img {
+        float: left;
+        position: absolute;
+        top: 0;
+    }
+
+    &-message {
+        
+        &_bg-color_pd {
+            width: 770px;
+            height: 756px;
+            background-color: #f0f0f0;
+            padding: 120px 185px 90px 185px;
+            margin-left: auto;
+        }
+
+        &__txt_pd {
+            padding-top: 30px;
+            font-size: 16px;
+            font-family: 'Noto Sans JP',sans-serif !important;
+            line-height: 2;
+        }
+    }
+}
+
+
+// COMPANY CSS
+
+.company {
+    width: 100%;
+
+    &-inner {
+        @include inner-width;
+        padding: 120px 0;
+    }
+
+    &__ttl {
+        padding-bottom: 30px;
+        width: 100%;
+        border-bottom: 1px solid #dddddd;
+    }
+}
+
+.company__table {
+    width: 800px;
+    margin-left: auto;
+    margin-bottom: 40px;
+    border-collapse: collapse;
+
+    tr {
+        height: 56px;
+        border-bottom: 1px solid #dddddd;
+        width: 100%;
+
+    }
+
+    th {
+        width: 144px;
+        font-size: 16px;
+        font-weight: bold;
+        text-align: left;
+    }
+}
+
+.map {
+    width: 100%;
+}
+
+
+// レスポンシブCSS
+@media screen and (max-width: 768px) {
+    .about-mv {
+        height: 615px;
+    }
+    
+    .about-mv__img {
+        width: 76.4%;
+        height: 529px;
+        object-fit: cover;
+    }
+    
+    .about-mv__txt {
+        position: absolute;
+        top: 200px;
+        left: 50%;
+    
+        &_small_color {
+            font-size: 16px;
+        }
+    
+        &_big_color_pd {
+            font-size: 52px;
+        }
+    }
+    
+    // vision CSS
+    
+    .vision {
+        width: 100%;
+    
+        &-inner {
+            padding-top: 80px;
+            padding-bottom: 80px;
+            padding-left: 150px;
+        }
+    
+        &__txt {
+            font-size: 14px;
+        }
+    }
+    
+    
+    // CEO CSS 
+    
+    .ceo {
+    
+        &-inner {
+            padding-top: 131px;
+            padding-right: 30px;
+            padding-left: 30px;
+        }
+    
+        &__img {
+            float: left;
+            position: absolute;
+            top: 0;
+            width: 320px;
+            object-fit: contain;
+        }
+    
+        &-message {
+            
+            &_bg-color_pd {
+                width: 494px;
+                background-color: #f0f0f0;
+                padding: 109px 39px 94px 40px;
+                margin-left: auto;
+            }
+    
+            &__txt_pd {
+                padding-top: 30px;
+                font-size: 16px;
+                font-family: 'Noto Sans JP',sans-serif !important;
+                line-height: 2;
+            }
+        }
+    }
+    
+    
+    // COMPANY CSS
+    
+    .company {
+        width: 100%;
+    
+        &-inner {
+            @include inner-width;
+            padding: 80px 30px;
+        }
+    }
+    
+    .company__table {
+        width: calc(100% - 30px);
+        margin-left: 0;
+        margin-bottom: 40px;
+        margin-left: 30px;
+        border-collapse: collapse;
+    
+        tr {
+            height: 56px;
+            border-bottom: 1px solid #dddddd;
+            width: 100%;
+    
+        }
+    
+        th {
+            width: 144px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: left;
+        }
+    
+    }
+    
+    .map {
+        width: 100%;
+    }
+}
+
+
+
+
+
+@media screen and (max-width: 425px) {
+    .about-mv {
+        height: 449px;
+    }
+
+    .about-mv__img {
+        height: 387px;
+    }
+
+    .about-mv__txt {
+        top: 149px;
+        left: 10%;
+    }
+
+    // vision CSS
+    .vision {
+        &-inner {
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+    }
+
+    // CEO CSS
+    .ceo {
+        &-inner {
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+
+        &__img {
+            left: -15px;
+        }
+
+        &-message {
+        
+            &_bg-color_pd {
+                width: 100%;
+                height: 799px;
+                background-color: #f0f0f0;
+                padding: 126px 29px 80px 28px;
+                margin-left: 0;
+            }
+    
+            &__txt_pd {
+                padding-top: 30px;
+                font-size: 14px;
+                font-family: 'Noto Sans JP',sans-serif !important;
+                line-height: 2;
+            }
+        }
+    }
+
+    // COMPANY CSS
+
+    .company {
+        width: 100%;
+
+        &-inner {
+            @include inner-width;
+            padding: 80px 15px;
+        }
+    }
+
+    .company__table {
+        width: 100%;
+        margin-bottom: 40px;
+        margin-left: 0;
+
+        tr {
+            height: 60px;
+            border-bottom: 1px solid #dddddd;
+            width: 100%;
+
+        }
+
+        th {
+            font-size: 14px;
+        }
+
+        td {
+            font-size: 14px;
+        }
+
+    }
+
+    .map {
+        width: 100%;
+        height: 470px;
+    }
+}

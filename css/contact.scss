@@ -1,0 +1,226 @@
+@import "variable";
+@import "blocks";
+
+
+.contact-mv {
+    background: linear-gradient(to right,white 0%, white 45.8%, #222222 45.8%, #222222 100%);
+    width: 100%;
+    height: 451px;
+    position: relative;
+}
+
+.contact-mv__img {
+    width: 76.4%;
+    height: 387px;
+    object-fit: cover;
+}
+
+.contact-mv-background {
+    position: relative;
+    line-height: 0;
+
+    &:before {
+        content: "";
+        background-color: rgba(0,0,0,0.5);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        width: 76.4%;
+    }
+}
+
+.contact-mv__txt {
+    position: absolute;
+    top: 156px;
+    left: 59.5%;
+
+    &_small_color {
+        color: white;
+        font-size: 20px;
+        font-weight: 700;
+        padding-top: 10px;
+    }
+
+    &_big_color_pd {
+        color: white;
+        font-size: 72px;
+        font-weight: 800;
+        line-height: 1.19;
+    }
+}
+
+.contact-form {
+    width: 100%;
+    color: #333333;
+    font-family: 'Noto Sans JP', sans-serif !important;
+    font-weight: 300;
+    font-size: 16px;
+    letter-spacing: 0.004em;
+    line-height: 1.5;
+
+    &-inner {
+        width: 700px;
+        margin: 0 auto;
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+}
+
+.contact__txt_pd {
+    padding-bottom: 54px;
+}
+.contact__type {
+
+    &__ttl {
+        padding-bottom: 20px;
+    }
+}
+
+.radios {
+    display: flex;
+}
+
+.radio {
+    margin-right: 40px;
+}
+
+.input-radio {
+    margin-right: 10px;
+}
+
+.contact_pd {
+    padding-top: 45px;
+}
+
+.contact-form1 {
+    width: 100%;
+    height: 41px;
+    border: 1px solid #333333;
+}
+
+.input__ttl_pd {
+    padding-bottom: 10px;
+}
+
+.contact__contents-area {
+    width: 100%;
+    height: 212px;
+    resize: none;
+    border: 1px solid #333333;
+}
+
+.privacy-policy {
+    &_pd {
+        padding-top: 40px;
+        padding-bottom: 43px;
+    }
+
+    &__ttl_pb {
+        font-size: 16px;
+        font-family: 'Montserrat' !important;
+        font-weight: 800;
+        padding-bottom: 10px;
+    }
+
+    &__txt {
+        width: 100%;
+        height: 252px;
+        padding: 5px 10px 0 10px;
+        overflow: scroll;
+        border: 1px solid #333333;
+    }
+}
+
+.agree {
+    text-align: center;
+}
+
+.checkbox {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border-radius: 0;
+}
+
+.input_center {
+    text-align: center;
+    padding-top: 41px;
+}
+
+.input__btn {
+    width: 160px;
+    height: 36px;
+    color: white;
+    font-family: 'Montserrat' !important;
+    font-size: 14px;
+    font-weight: 800;
+    text-align: center;
+    border: none;
+    background-color: black;
+}
+
+
+// レスポンシブCSS
+
+@media screen and (max-width: 768px) {
+    .contact-mv {
+        height: 615px;
+    }
+    
+    .contact-mv__img {
+        width: 76.4%;
+        height: 529px;
+        object-fit: cover;
+    }
+    
+    .contact-mv__txt {
+        position: absolute;
+        top: 200px;
+        left: 58%;
+    
+        &_small_color {
+            font-size: 16px;
+        }
+    
+        &_big_color_pd {
+            font-size: 52px;
+        }
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .contact-mv {
+        height: 365px;
+    }
+
+    .contact-mv__img {
+        height: 270px;
+    }
+
+    .contact-mv__txt {
+        top: 100px;
+        left: 20%;
+    
+        &_small_color {
+            text-align: right;
+        }
+    }
+
+    .contact-form {
+        &-inner {
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+    }
+
+    .radios {
+        display: block;
+    }
+
+    .radio {
+        margin-bottom: 15px;
+    }
+}
