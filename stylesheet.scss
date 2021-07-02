@@ -1,0 +1,476 @@
+@import "variable";
+@import "blocks";
+
+
+// メインビジュアルCSS
+
+.mv {
+    background: linear-gradient(to right,white 0%, white 45.8%, #222222 45.8%, #222222 100%);
+    width: 100%;
+    height: 740px;
+    position: relative;
+}
+
+
+.background {
+    position: relative;
+    line-height: 0;
+
+    &::before {
+        content: "";
+        background-color: rgba(0,0,0,0.5);
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 76.4%;
+    }
+
+    &__img {
+        width: 76.4%;
+        height: 640px;
+        object-fit: cover;
+    }
+}
+
+.mv__txt {
+    position: absolute;
+    top: 161px;
+    left: 66.3%;
+
+    &_small_color {
+        color: white;
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    &_big_color_pd {
+        color: white;
+        font-size: 72px;
+        font-weight: 800;
+        line-height: 1.19;
+        padding-top: 10px;
+    }
+}
+
+
+// コンテンツCSS
+
+// ABOUT CSS
+
+.contents {
+    width: 100%;
+    height: 1398px;
+    background: linear-gradient(180deg, white 0%, white 44.8%, #f0f0f0 44.8%, #f0f0f0 100%);
+}
+
+.contents-inner {
+    @include inner-width;
+}
+
+.about-wrapper {
+    width: 100%;
+    height: 607px;
+    position: relative;
+    padding-top: 120px;
+}
+
+.about {
+    width: 590px;
+    height: 387px;
+    position: absolute;
+    top: 230px;
+    left: 50px;
+
+    &_bg-color_pd {
+        background-color: rgba(255,255,255,0.95);
+        padding: 50px 30px;
+    }
+
+    &__txt_size_pd {
+        font-size: 16px;
+        font-family: 'Noto Sans JP',sans-serif !important;
+        font-weight: 300;
+        line-height: 2;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    &-wrapper__img {
+        width: 100%;
+        height: 607px;
+        object-fit: cover;
+    }
+}
+
+
+// works-culture CSS
+
+.works-culture-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 190px;
+}
+
+.works {
+    &__ttl_pd {
+        padding-bottom: 30px;
+    }
+
+    &__img {
+        width: 94.5%;
+        object-fit: contain;
+    }
+
+    &__txt_pd {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        font-size: 16px;
+    }
+}
+
+.culture {
+    &__ttl_pd {
+        padding-bottom: 30px;
+    }
+
+    &__img {
+        width: 94.5%;
+        object-fit: contain;
+    }
+
+    &__txt_pd {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        font-size: 16px;
+    }
+}
+
+
+// TOPICS CSS
+
+.topics {
+    width: 100%;
+}
+
+.topics-inner {
+    @include inner-width;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.topics-contents_pd {
+    width: 700px;
+    padding-bottom: 30px;
+    margin: 0 0 0 auto;
+}
+
+.topic {
+
+    &_pd {
+        padding-top: 32px;
+    }
+
+    &__day_size_color {
+        font-size: 10px;
+        color: #cecece;
+    }
+
+    &__ttl_pd_border {
+        font-size: 14px;
+        padding-top: 13px;
+        padding-bottom: 12px;
+        border-bottom: 1px solid #dddddd;
+    }
+}
+
+.button_right {
+    text-align: right;
+}
+
+
+// contact CSS
+
+.contact {
+    width: 100%;
+    background-color: #f2f2f2;
+
+    &-contents_pd {
+        padding-right: 80px;
+    }
+
+    &__txt_pd {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        line-height: 2;
+        font-size: 16px;
+    }
+
+    &__img {
+        width: 52.7%;
+        object-fit: contain;
+    }
+}
+
+.contact-inner {
+    @include inner-width;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+    padding-top: 60px;
+    padding-bottom: 120px;
+}
+
+
+
+// レスポンシブCSS
+
+@media screen and (max-width: 768px) {
+
+    // メインビジュアルCSS
+    .mv {
+        background: linear-gradient(to right,white 0%, white 26.8%, #222222 26.8%, #222222 100%);
+        height: 1024px;
+    }
+
+    .background {
+    
+        &::before {
+            width: 78.1%;
+        }
+    
+        &__img {
+            width: 78.1%;
+            height: 890px;
+            object-fit: cover;
+        }
+    }
+
+    .mv__txt {
+        top: 333px;
+        left: 55%;
+
+        &_small_color {
+            font-size: 16px;
+        }
+
+        &_big_color_pd {
+            font-size: 56px;
+            line-height: 0.95;
+            letter-spacing: 0.063em;
+        }
+    }
+
+
+    // コンテンツCSS
+    .contents {
+        height: 1801px;
+        background: linear-gradient(180deg, white 0px, white 559px, #f0f0f0 559px, #f0f0f0 1242px);
+    }
+
+    .about-wrapper {
+        height: 479px;
+        padding-top: 80px;
+
+        &__img {
+            height: 479px;
+            width: 100%;
+        }
+    }
+
+    .about {
+        width: 76.8%;
+        height: 359px;
+        top: 140px;
+        left: 50%;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+
+        &_bg-color_pd {
+            padding: 40px 30px;
+        }
+    }
+
+
+    // works-culture CSS
+
+    .works-culture-wrapper {
+        display: block;
+        padding-top: 120px;
+        padding-left: 30px;
+    }
+
+    .works__img {
+        width: 70.5%;
+    }
+
+
+    .culture {
+        padding-top: 80px;
+    }
+
+    .culture__img {
+        width: 70.5%;
+    }
+
+
+    // TOPICS CSS
+
+    .topics {
+        width: 100%;
+    }
+
+    .topics-inner {
+        @include inner-width;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        padding-right: 38px;
+        padding-left: 30px;
+    }
+
+    .topics-contents_pd {
+        width: 100%;
+    }
+
+    .button_right {
+        text-align: left;
+    }
+
+    // contact CSS
+
+    .contact {
+        width: 100%;
+        background-color: #f2f2f2;
+
+        &-contents_pd {
+            padding-top: 30px;
+            padding-right: 0;
+            max-width: 510px;
+        }
+
+        &__img {
+            width: 70.5%;
+        }
+
+    }
+
+    .contact-inner {
+        @include inner-width;
+        display: block;
+        padding-top: 40px;
+        padding-bottom: 80px;
+        padding-left: 30px;
+    }
+}
+
+
+@media screen and (max-width: 425px) {
+    .mv {
+        height: 667px;
+        background: linear-gradient(to right,white 0%, white 24.5%, #222222 24.5%, #222222 100%);
+    }
+
+    .background {
+    
+        &::before {
+            width: 76.5%;
+        }
+    
+        &__img {
+            width: 76.5%;
+            height: 580px;
+            object-fit: cover;
+        }
+    }
+
+    .mv__txt {
+        top: 178px;
+        left: 28%;
+    }
+
+     // コンテンツCSS
+    .contents {
+        height: 1585px;
+        background: linear-gradient(180deg, white 0px, white 619px, #f0f0f0 619px, #f0f0f0 1555px);
+    }
+
+    .about-wrapper {
+        height: 541px;
+        padding-top: 78px;
+
+        &__img {
+            height: 541px;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .about {
+        width: 92%;
+        height: 441px;
+        top: 128px;
+        left: 50%;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+
+        &_bg-color_pd {
+            padding: 50px 15px 50px 30px;
+        }
+
+        &__txt_size_pd {
+            font-size: 14px;
+        }
+    }
+
+
+    .works-culture-wrapper {
+        padding-top: 120px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .works__img {
+        width: 100%;
+    }
+
+    .culture {
+        padding-top: 40px;
+    }
+
+    .culture__img {
+        width: 100%;
+    }
+
+    .topics-inner {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .topic__ttl_pd_border {
+        font-size: 12px;
+        font-weight: 700;
+    }
+
+
+    .contact {
+        &-contents_pd {
+            max-width: 100%;
+        }
+
+        &__img {
+            width: 100%;
+        }
+    }
+
+    .contact-inner {
+        padding-bottom: 40px;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}
+
